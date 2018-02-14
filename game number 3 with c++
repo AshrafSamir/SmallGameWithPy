@@ -64,7 +64,7 @@ int main()
                     {
                         break;
                     }
-                    if((i!=z) && (arr1[i]+arr1[z]+x==15))
+                    if((arr1[i]!=arr1[z]) &&(arr1[i]!=x) && (x!=arr1[z]) &&  (arr1[i]+arr1[z]+x==15))
                     {
                         cout<<"player 1 winner"<<endl;
                         t=true;
@@ -126,7 +126,7 @@ int main()
                     {
                         break;
                     }
-                    if((u!=p) && (arr2[u]+arr2[p]+y==15))
+                    if((arr2[u]!=arr2[p]) &&(arr2[u]!=y) &&(y!=arr2[p]) && (arr2[u]+arr2[p]+y==15))
                     {
                         cout<<"player 2 winner"<<endl;
                         w=true;
@@ -151,5 +151,8 @@ int main()
 
     return 0;
 }
+
+
+
 
 
