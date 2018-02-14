@@ -29,7 +29,7 @@ while(counter<9):
             for z in arr1:
                 if(t==True):
                     break
-                if(i!=z and i+z+x==15):
+                if(i!=z and i!=x and x!=z and i+z+x==15):
                     print("Player 1 winner ")
                     t=True
                     break
@@ -57,7 +57,7 @@ while(counter<9):
                     for l in arr2:
                          if(w==True):
                             break
-                         if(p!=l and p+l+y==15):
+                         if(p!=l and l!=y and p!=y and  p+l+y==15):
                              print("Player 2 winner ")
                              w=True
                              break
