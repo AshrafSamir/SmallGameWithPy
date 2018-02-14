@@ -1,0 +1,155 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int arr[9]= {1,2,3,4,5,6,7,8,9},counter=0,x,y;
+    vector<int> arr1;
+     vector<int> arr2;
+    bool t=false; //t and w to break from all code when there exist a winner
+    bool w=false;
+    while(counter<9) // x >> player 1 and y >> player 2
+    {
+        if(t==false && w==false)
+        {
+            cout<<"player 1 : "<<endl;
+            cin>>x;
+            if(x==0 || x>9)
+            {
+                while(x==0 || x>9)
+                {
+                    cout<<"Enter a new num player 1 : "<<endl;
+                    cin>>x;
+
+                }
+            }
+            if(arr[x-1]==-1)
+            {
+                while(arr[x-1]==-1)
+                {
+                    cout<<"Enter a new num player 1 :"<<endl;
+                    cin>>x;
+                    if(x==0 || x>9)
+                    {
+                        while(x==0 || x>9)
+                        {
+                            cout<<"Enter a new num player 1 : "<<endl;
+                            cin>>x;
+
+                        }
+                    }
+                    if(arr[x-1!=-1])
+                    {
+                        arr1.push_back(x);
+                    }
+                }
+            }
+            else
+            {
+                arr[x-1]=-1;
+                arr1.push_back(x);
+
+
+            }
+            for(int i=0; i<5; i++)
+            {
+                if(t==true)
+                {
+                    break;
+                }
+                for(int z=0; z<5; z++)
+                {
+                    if(t==true)
+                    {
+                        break;
+                    }
+                    if((i!=z) && (arr1[i]+arr1[z]+x==15))
+                    {
+                        cout<<"player 1 winner"<<endl;
+                        t=true;
+                        break;
+                    }
+
+                }
+
+            }
+
+        }
+        if(t==false && w==false)
+        {
+            cout<<"player 2 : "<<endl;
+            cin>>y;
+            if(y==0 || y>9)
+            {
+                while(y==0 || y>9)
+                {
+                    cout<<"Enter a new num player 2 : "<<endl;
+                    cin>>y;
+                }
+            }
+            if(arr[y-1]==-1)
+            {
+                while(arr[y-1]==-1)
+                {
+                    cout<<"Enter a new num player 2 :"<<endl;
+                    cin>>y;
+                    if(y==0 || y>9)
+                    {
+                        while(y==0 || y>9)
+                        {
+                            cout<<"Enter a new num player 2 : "<<endl;
+                            cin>>y;
+                        }
+                    }
+                    if(arr[y-1!=-1])
+                    {
+                        arr2.push_back(y);
+                    }
+                }
+            }
+            else
+            {
+                arr[y-1]=-1;
+                arr2.push_back(y);
+
+            }
+            for(int u=0; u<4; u++)
+            {
+                if(w==true)
+                {
+                    break;
+                }
+                for(int p=0; p<4; p++)
+                {
+                    if(w==true)
+                    {
+                        break;
+                    }
+                    if((u!=p) && (arr2[u]+arr2[p]+y==15))
+                    {
+                        cout<<"player 2 winner"<<endl;
+                        w=true;
+                        break;
+                    }
+
+                }
+
+            }
+
+        }
+        counter++;
+
+
+
+
+    }
+    if(w==false && t==false)
+    {
+        cout<<"Draw"<<endl;
+    }
+
+    return 0;
+}
+
+
